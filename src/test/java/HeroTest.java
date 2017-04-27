@@ -12,6 +12,7 @@ public class HeroTest {
 
   @Test
   public void Hero_instantiatesWithName_String() {
-    Hero
+    Hero myHero = new Hero("Immortals");
+    assertEquals("Immortals", myHero.getName());
   }
 }
