@@ -10,10 +10,11 @@ public class Hero {
   private String mSpower;
 
   //constructor
-  public Hero(String name, int age, String spower) {
+  public Hero(String name, int age, String spower, String weakness) {
   mName = name;
   mAge = age;
   mSpower = spower;
+  mWeakness = weakness;
   mCreatedAt = LocalDateTime.now();
   instances.add(this);
 
@@ -30,6 +31,10 @@ public class Hero {
   public String getSpower() {
     return mSpower;
   }
+  // //implements getWeakness()
+  // public String getSpower() {
+  //   return mSpower;
+  // }
   //implements getCreatedAt()
   public LocalDateTime getCreatedAt() {
     return mCreatedAt;

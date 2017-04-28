@@ -30,9 +30,14 @@ public class HeroTest {
 
     //ensure we can assign hero a special power and retrive it
     @Test
-    public void Spower_instantiatesWithAge_String() {
+    public void Spower_instantiatesWithSpower_String() {
       // Hero myHero = new Hero("Immortal", 29, "sing");
       assertEquals("sing", mHero.getSpower());
+    }
+    @Test
+    public void Weakness_instantiatesWithWeakness_String() {
+      // Hero myHero = new Hero("Immortal", 29, "sing");
+      assertEquals("weak", mHero.getWeakness());
     }
 
   //automatically records date and time hero was entered
