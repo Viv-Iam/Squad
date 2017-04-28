@@ -56,9 +56,9 @@ public class SquadTest {
      assertEquals(Squad.find(squadTwo.getId()), squadTwo);
    }
 
-   @Test
-   public void getHeroes_initiallyReturnsEmptyList_ArrayList() {
-  assertEquals(0, mSquad.getHeroes().size());
-}
+//    @Test
+//    public void getHeroes_initiallyReturnsEmptyList_ArrayList() {
+//   assertEquals(0, mSquad.getHeroes().size());
+// }
 
 }
