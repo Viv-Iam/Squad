@@ -9,6 +9,7 @@ public class Hero {
   private int mAge;
   private String mSpower;
   private String mWeakness;
+  private int mId;
 
   //constructor
   public Hero(String name, int age, String spower, String weakness) {
@@ -18,7 +19,7 @@ public class Hero {
   mWeakness = weakness;
   mCreatedAt = LocalDateTime.now();
   instances.add(this);
-
+  mId = instances.size();
   }
   //implements getName()
   public String getName() {
@@ -48,5 +49,8 @@ public class Hero {
   public static void clear() {
   instances.clear();
 }
-
+//implements getId()
+public int getId() {
+   return mId;
+ }
 }
