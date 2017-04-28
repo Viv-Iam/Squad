@@ -32,8 +32,9 @@ public class App {
 
       //fetch user-inputted hero name from the form and save it in String
       String name = request.queryParams("name");
+      Integer age = request.queryParams(age);
       //Hero constructor to create new Hero object and add into heros ArrayList
-      Hero newHero = new Hero(name);
+      Hero newHero = new Hero(name, age);
       heros.add(newHero);
 
       //render success page

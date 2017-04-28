@@ -6,18 +6,18 @@ public class HeroTest {
 
 //confirm we can successfully instantiate Squad objects
   @Test
-  public void Name_instantiatesCorrectly_true() {
+  public void Hero_instantiatesCorrectly_true() {
     Hero myHero = new Hero("Immortals");
     assertEquals(true, myHero instanceof Hero);
   }
 //ensure we can assign hero a name and retrive it
   @Test
-  public void Name_instantiatesWithName_String() {
+  public void Hero_instantiatesWithName_String() {
     Hero myHero = new Hero("Immortals");
     assertEquals("Immortals", myHero.getName());
   }
 
-  //ensure we can assign hero a name and retrive it
+  //ensure we can assign hero an age and retrive it
     @Test
     public void Age_instantiatesWithAge_Integer() {
       Hero myHero = new Hero(29);

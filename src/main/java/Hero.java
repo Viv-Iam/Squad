@@ -11,6 +11,7 @@ public class Hero {
   //constructor
   public Hero(String name, Integer age) {
   mName = name;
+  mAge = age;
   mCreatedAt = LocalDateTime.now();
   instances.add(this);
 
@@ -18,6 +19,10 @@ public class Hero {
   //implements getName()
   public String getName() {
     return mName;
+  }
+
+  public Integer getAge() {
+    return mAge;
   }
   //implements getCreatedAt()
   public LocalDateTime getCreatedAt() {
