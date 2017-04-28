@@ -20,7 +20,7 @@ public String getName() {
 public static List<Squad> all() {
    return instances;
  }
-
+//implements clear()
  public static void clear() {
    instances.clear();
  }

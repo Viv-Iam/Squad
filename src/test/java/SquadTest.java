@@ -41,4 +41,9 @@ public class SquadTest {
     Squad.clear();
     assertEquals(Squad.all().size(), 0);
   }
+
+  @Test
+  public void getId_categoriesInstantiateWithAnId_1() {
+    assertEquals(1, mSquad.getId());
+  }
 }
