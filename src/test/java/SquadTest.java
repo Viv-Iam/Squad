@@ -34,4 +34,11 @@ public class SquadTest {
    assertEquals(true, Squad.all().contains(squadOne));
    assertEquals(true, Squad.all().contains(squadTwo));
  }
+
+//empties the instances ArrayList
+ @Test
+  public void clear_emptiesAllSquadsFromList_0() {
+    Squad.clear();
+    assertEquals(Squad.all().size(), 0);
+  }
 }
