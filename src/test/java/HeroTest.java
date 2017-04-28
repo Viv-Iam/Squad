@@ -16,4 +16,11 @@ public class HeroTest {
     Hero myHero = new Hero("Immortals");
     assertEquals("Immortals", myHero.getName());
   }
+
+  //automatically records date and time hero was entered
+  @Test
+  public void getCreatedAt_instantiatesWithCurrentTime_today() {
+    Hero myHero = new Hero("Immortals");
+    assertEquals(LocalDateTime.now().getDayOfWeek(), myHero.getCreatedAt().getDayOfWeek());
+  }
 }
