@@ -49,4 +49,11 @@ public class SquadTest {
   }
 
 
+  @Test
+   public void find_returnsSquadWithSameId_squadTwo() {
+     Squad squadOne = new Squad("Home");
+     Squad squadTwo = new Squad("Work");
+     assertEquals(Squad.find(Squad.getId()), squadTwo);
+   }
+
 }
