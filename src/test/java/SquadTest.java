@@ -11,7 +11,7 @@ public class SquadTest {
   }
   @After
  public void tearDown() {
-   Hero.clear();
+   Squad.clear();
  }
 
 //asserts if instances can be created succefully
@@ -42,8 +42,11 @@ public class SquadTest {
     assertEquals(Squad.all().size(), 0);
   }
 
+  //assigns our squads unique id attributes
   @Test
   public void getId_categoriesInstantiateWithAnId_1() {
     assertEquals(1, mSquad.getId());
   }
+
+
 }
