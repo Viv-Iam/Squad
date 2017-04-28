@@ -6,9 +6,10 @@ public class Hero {
   private String mName;
   private LocalDateTime mCreatedAt;
   private static List<Hero> instances = new ArrayList<Hero>();
+  private Integer mAge;
 
   //constructor
-  public Hero(String name) {
+  public Hero(String name, Integer age) {
   mName = name;
   mCreatedAt = LocalDateTime.now();
   instances.add(this);

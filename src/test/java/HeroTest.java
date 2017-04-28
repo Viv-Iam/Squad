@@ -6,16 +6,23 @@ public class HeroTest {
 
 //confirm we can successfully instantiate Squad objects
   @Test
-  public void Hero_instantiatesCorrectly_true() {
+  public void Name_instantiatesCorrectly_true() {
     Hero myHero = new Hero("Immortals");
     assertEquals(true, myHero instanceof Hero);
   }
 //ensure we can assign hero a name and retrive it
   @Test
-  public void Hero_instantiatesWithName_String() {
+  public void Name_instantiatesWithName_String() {
     Hero myHero = new Hero("Immortals");
     assertEquals("Immortals", myHero.getName());
   }
+
+  //ensure we can assign hero a name and retrive it
+    @Test
+    public void Age_instantiatesWithAge_Integer() {
+      Hero myHero = new Hero(29);
+      assertEquals(29, myHero.getAge());
+    }
 
   //automatically records date and time hero was entered
   @Test
@@ -27,8 +34,8 @@ public class HeroTest {
   //Retrives all instances of a class
   @Test
   public void all_returnsAllInstancesOfHero_true() {
-    Task heroOne = new Hero("Mortals");
-    Task heroTwo = new Hero("Immortals");
+    Hero heroOne = new Hero("Mortals");
+    Hero heroTwo = new Hero("Immortals");
     assertEquals(true, Hero.all().contains(heroOne));
     assertEquals(true, Hero.all().contains(heroTwo));
   }
