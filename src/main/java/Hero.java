@@ -7,11 +7,13 @@ public class Hero {
   private LocalDateTime mCreatedAt;
   private static List<Hero> instances = new ArrayList<Hero>();
   private int mAge;
+  private String mSpower;
 
   //constructor
-  public Hero(String name, int age) {
+  public Hero(String name, int age, String spower) {
   mName = name;
   mAge = age;
+  mSpower = spower;
   mCreatedAt = LocalDateTime.now();
   instances.add(this);
 
@@ -20,9 +22,13 @@ public class Hero {
   public String getName() {
     return mName;
   }
-
+  //implements getAge()
   public int getAge() {
     return mAge;
+  }
+  //implements getSpower()
+  public String getSpower() {
+    return mSpower;
   }
   //implements getCreatedAt()
   public LocalDateTime getCreatedAt() {
