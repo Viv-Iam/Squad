@@ -7,7 +7,7 @@ public class SquadTest {
   private Squad mSquad;
   @Before
   public void instantiate() {
-    mSquad = new Squad();
+    mSquad = new Squad("Unbeatable");
   }
   @After
  public void tearDown() {
@@ -18,5 +18,10 @@ public class SquadTest {
   @Test
   public void squad_instantiatesCorrectly_true() {
   assertEquals(true, mSquad instanceof Squad);
+  }
+
+  @Test
+  public void Name_categoryInstantiatesWithName_String() {
+  assertEquals("Unbeatable", mSquad.getName());
   }
 }
