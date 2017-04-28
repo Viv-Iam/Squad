@@ -67,4 +67,12 @@ public void getId_herosInstantiateWithAnID_1() {
   // Hero.clear();  // Remember, the test will fail without this line! We need to empty leftover Heros from previous tests!
   assertEquals(1, mHero.getId());
 }
+
+//locate specific Hero using unique id
+@Test
+public void find_returnHeroWith_secondHero() {
+  Hero heroOne = new Hero("Mortals", 29, "sing", "weak");
+  Hero heroTwo = new Hero("Immortals", 29, "sing", "weak");
+  assertEquals(Hero.find(secondHero.getId()),secondHero);
+}
 }
