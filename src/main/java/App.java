@@ -23,7 +23,6 @@ public class App {
 
       //Save multiple hero objects into the user's session in an array list
       ArrayList<Hero> heros = request.session().attribute("heros");
-
       //if ArrayList does not exist create new one and add to session
       if (heros == null) {
         heros = new ArrayList<Hero>();
