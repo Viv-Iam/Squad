@@ -1,5 +1,5 @@
 <h1>HERO LIST</h1>
-#if ($hero)
+#if ($heros)
 <ul>
 #foreach ($hero in $heros)
 <li>$hero.getName()</li>
@@ -7,7 +7,7 @@
 </ul>
 
 #else
-<p>NO NAME!</p>
+<p>NO HERO NAMES!</p>
 #end
 <p>Add a new Hero:</p>
 

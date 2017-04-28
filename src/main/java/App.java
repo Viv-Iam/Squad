@@ -27,7 +27,7 @@ public class App {
       //if ArrayList does not exist create new one and add to session
       if (heros == null) {
         heros = new ArrayList<Hero>();
-        request.session().attribute("tasks", tasks);
+        request.session().attribute("heros", heros);
       }
 
       //fetch user-inputted hero name from the form and save it in String
