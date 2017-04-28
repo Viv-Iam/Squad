@@ -2,19 +2,19 @@
 #if ($heros)
 <ul>
 #foreach ($hero in $heros)
-<div class="col-sm-4">
+
 $hero.getName() $hero.getCreatedAt()
 <li>$hero.getAge()</li>
 <li>$hero.getSpower()</li>
 <li>$hero.getWeakness()</li>
-</div>
-<hr> <br>
+
 #end
 </ul>
 
 #else
 <p>NO HERO NAMES!</p>
 #end
+<div>
 <p>Add a new Hero:</p>
 
 <form action="/heros" method="post">
@@ -33,3 +33,4 @@ $hero.getName() $hero.getCreatedAt()
 
   <button type="submit" class="btn btn-default">ADD HERO</button>
 </form>
+</div>
