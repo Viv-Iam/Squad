@@ -53,7 +53,12 @@ public class SquadTest {
    public void find_returnsSquadWithSameId_squadTwo() {
      Squad squadOne = new Squad("Home");
      Squad squadTwo = new Squad("Work");
-     assertEquals(Squad.find(Squad.getId()), squadTwo);
+     assertEquals(Squad.find(squadTwo.getId()), squadTwo);
    }
+
+   @Test
+   public void getHeroes_initiallyReturnsEmptyList_ArrayList() {
+  assertEquals(0, mSquad.getHeroes().size());
+}
 
 }
