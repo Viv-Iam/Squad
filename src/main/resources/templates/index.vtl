@@ -2,7 +2,13 @@
 #if ($heros)
 <ul>
 #foreach ($hero in $heros)
-<li>$hero.getName() $hero.getCreatedAt()</li>
+<div class="col-sm-4">
+$hero.getName() $hero.getCreatedAt()
+<li>$hero.getAge()</li>
+<li>$hero.getSpower()</li>
+<li>$hero.getWeakness()</li>
+</div>
+<hr> <br>
 #end
 </ul>
 
@@ -18,8 +24,8 @@
   <label for="age">Hero Age</label>
   <input id="age" name="age" type="text"> <br>
 
-  <label for="specialpowers">Hero Special-powers</label>
-  <input id="specialpowers" name="specialpowers" type="text"> <br>
+  <label for="spower">Hero Special-powers</label>
+  <input id="spower" name="spower" type="text"> <br>
 
   <label for="weakness">Hero Weakness</label>
   <input id="weakness" name="weakness" type="text"> <br>

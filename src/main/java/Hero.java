@@ -8,6 +8,7 @@ public class Hero {
   private static List<Hero> instances = new ArrayList<Hero>();
   private int mAge;
   private String mSpower;
+  private String mWeakness;
 
   //constructor
   public Hero(String name, int age, String spower, String weakness) {
@@ -31,10 +32,10 @@ public class Hero {
   public String getSpower() {
     return mSpower;
   }
-  // //implements getWeakness()
-  // public String getSpower() {
-  //   return mSpower;
-  // }
+  //implements getWeakness()
+  public String getWeakness() {
+    return mWeakness;
+  }
   //implements getCreatedAt()
   public LocalDateTime getCreatedAt() {
     return mCreatedAt;
