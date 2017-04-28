@@ -26,6 +26,7 @@ public class SquadTest {
   assertEquals("Unbeatable", mSquad.getName());
   }
 
+//Retrives all instances of a class
   @Test
  public void all_returnsAllInstancesOfSquad_true() {
    Squad squadOne = new Squad("Unbeatable");
