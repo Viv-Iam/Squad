@@ -23,4 +23,13 @@ public class HeroTest {
     Hero myHero = new Hero("Immortals");
     assertEquals(LocalDateTime.now().getDayOfWeek(), myHero.getCreatedAt().getDayOfWeek());
   }
+
+  //Retrives all instances of a class
+  @Test
+  public void all_returnsAllInstancesOfHero_true() {
+    Task heroOne = new Hero("Mortals");
+    Task heroTwo = new Hero("Immortals");
+    assertEquals(true, Hero.all().contains(heroOne));
+    assertEquals(true, Hero.all().contains(heroTwo));
+  }
 }
