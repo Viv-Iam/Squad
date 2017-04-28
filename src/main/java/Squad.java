@@ -32,4 +32,8 @@ public static List<Squad> all() {
  public int getId() {
    return mId;
  }
+
+ public static Squad find(int id) {
+   return instances.get(id - 1);
+ }
 }
