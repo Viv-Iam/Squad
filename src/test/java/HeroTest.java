@@ -10,7 +10,7 @@ public class HeroTest {
     Hero myHero = new Hero("Immortals");
     assertEquals(true, myHero instanceof Hero);
   }
-
+//ensure we can assign hero a name and retrive it
   @Test
   public void Hero_instantiatesWithName_String() {
     Hero myHero = new Hero("Immortals");
@@ -32,4 +32,12 @@ public class HeroTest {
     assertEquals(true, Hero.all().contains(heroOne));
     assertEquals(true, Hero.all().contains(heroTwo));
   }
+
+  //empties the instances ArrayList
+  @Test
+  public void clear_emptiesAllHerosFromArrayList_0() {
+  Hero myHero = new Hero("Immortals");
+  Hero.clear();
+  assertEquals(Hero.all().size(), 0);
+}
 }

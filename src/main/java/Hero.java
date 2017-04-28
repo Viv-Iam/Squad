@@ -5,19 +5,30 @@ import java.util.List;
 public class Hero {
   private String mName;
   private LocalDateTime mCreatedAt;
-  private static List<Task> instances = new ArrayList<Task>();
+  private static List<Hero> instances = new ArrayList<Hero>();
 
-
+  //constructor
   public Hero(String name) {
   mName = name;
   mCreatedAt = LocalDateTime.now();
+  instances.add(this);
 
   }
+  //implements getName()
   public String getName() {
     return mName;
   }
+  //implements getCreatedAt()
   public LocalDateTime getCreatedAt() {
     return mCreatedAt;
   }
+  //implements all()
+  public static List<Hero> all() {
+    return instances;
+  }
+  //implements clear()
+  public static void clear() {
+  instances.clear();
+}
 
 }
