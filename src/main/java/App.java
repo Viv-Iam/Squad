@@ -21,7 +21,10 @@ public class App {
     post("/heros", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
 
+      //Save multiple hero objects into the user's session in an array list
       ArrayList<Hero> heros = request.session().attribute("heros");
+
+      //if ArrayList does not exist create new one and add to session
       if (heros == null) {
         heros = new ArrayList<Hero>();
         request.session().attribute("tasks", tasks);
@@ -29,7 +32,7 @@ public class App {
 
       //fetch user-inputted hero name from the form and save it in String
       String name = request.queryParams("name");
-      //Hero constructor to create new Hero
+      //Hero constructor to create new Hero object and add into heros ArrayList
       Hero newHero = new Hero(name);
       heros.add(newHero);
 
