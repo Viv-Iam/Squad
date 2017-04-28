@@ -73,6 +73,6 @@ public void getId_herosInstantiateWithAnID_1() {
 public void find_returnHeroWith_secondHero() {
   Hero heroOne = new Hero("Mortals", 29, "sing", "weak");
   Hero heroTwo = new Hero("Immortals", 29, "sing", "weak");
-  assertEquals(Hero.find(secondHero.getId()),secondHero);
+  assertEquals(Hero.find(heroTwo.getId()),heroTwo);
 }
 }
