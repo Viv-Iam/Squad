@@ -20,8 +20,17 @@ public class SquadTest {
   assertEquals(true, mSquad instanceof Squad);
   }
 
+//ensure we can assign squad a name and retrive it
   @Test
   public void Name_categoryInstantiatesWithName_String() {
   assertEquals("Unbeatable", mSquad.getName());
   }
+
+  @Test
+ public void all_returnsAllInstancesOfSquad_true() {
+   Squad squadOne = new Squad("Unbeatable");
+   Squad squadTwo = new Squad("Beatable");
+   assertEquals(true, Squad.all().contains(squadOne));
+   assertEquals(true, Squad.all().contains(squadTwo));
+ }
 }
