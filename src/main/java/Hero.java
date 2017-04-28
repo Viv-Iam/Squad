@@ -6,10 +6,10 @@ public class Hero {
   private String mName;
   private LocalDateTime mCreatedAt;
   private static List<Hero> instances = new ArrayList<Hero>();
-  private Integer mAge;
+  private int mAge;
 
   //constructor
-  public Hero(String name, Integer age) {
+  public Hero(String name, int age) {
   mName = name;
   mAge = age;
   mCreatedAt = LocalDateTime.now();
@@ -21,7 +21,7 @@ public class Hero {
     return mName;
   }
 
-  public Integer getAge() {
+  public int getAge() {
     return mAge;
   }
   //implements getCreatedAt()
