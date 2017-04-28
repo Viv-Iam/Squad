@@ -12,8 +12,8 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      //retriving hero data from session and placing it in the model with hero key
-      model.put("hero", request.session().attribute("hero"));
+      //retriving heros ArrayList data from session and placing it in the model with heros key
+      model.put("heros", request.session().attribute("heros"));
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

@@ -1,7 +1,10 @@
 <h1>HERO LIST</h1>
 #if ($hero)
-<p>Current hero:</p>
-<p>$hero.getName()</p>
+<ul>
+#foreach ($hero in $heros)
+<li>$hero.getName()</li>
+#end
+</ul>
 
 #else
 <p>NO NAME!</p>
