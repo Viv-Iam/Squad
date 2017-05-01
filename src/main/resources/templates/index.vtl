@@ -1,20 +1,3 @@
-<h1>HERO LIST</h1>
-#if ($heros)
-<ul>
-#foreach ($hero in $heros)
-
-$hero.getName() $hero.getCreatedAt()
-<li>$hero.getAge()</li>
-<li>$hero.getSpower()</li>
-<li>$hero.getWeakness()</li>
-<br>
-#end
-</ul>
-
-#else
-<p>NO HERO NAMES!</p>
-#end
-<div>
 <p>Add a new Hero:</p>
 <a href="/squads">VIEW SQUADS LIST</a>
 <a href="/categories/new">ADD NEW SQUAD</a>
