@@ -48,7 +48,7 @@ public class SquadTest {
     assertEquals(1, mSquad.getId());
   }
 
-
+  //locates specific squad using unique id
   @Test
    public void find_returnsSquadWithSameId_squadTwo() {
      Squad squadOne = new Squad("Home");
@@ -56,9 +56,18 @@ public class SquadTest {
      assertEquals(Squad.find(squadTwo.getId()), squadTwo);
    }
 
+   //makes squad instantiate with empty task list
    @Test
    public void getHeroes_initiallyReturnsEmptyList_ArrayList() {
   assertEquals(0, mSquad.getHeroes().size());
+}
+
+//allows adding of Heroes to a Squad
+@Test
+public void addHero_addsHeroToList_true() {
+Hero hero = new Hero("Immortal", 29, "spower", "weakness");
+mSquad.addHero(hero);
+assertTrue(mSquad.getHeroes().contains(hero));
 }
 
 }

@@ -39,7 +39,11 @@ public static List<Squad> all() {
    return instances.get(id - 1);
  }
 
- public List<Task> getTasks() {
-   return mTasks;
+ public List<Hero> getHeroes() {
+   return mHeroes;
  }
+
+ public void addHero(Hero hero) {
+  mHeroes.add(hero);
+}
 }
