@@ -6,12 +6,14 @@ public class Squad {
 private String mName;
 private static List<Squad> instances = new ArrayList<Squad>();
 private int mId;
+private List<Hero> mHeroes;
 
 public Squad(String name) {
   mName = name;
   //add comes before mId
   instances.add(this);
   mId = instances.size();
+  mHeroes = new ArrayList<Hero>();
 
 }
 
@@ -35,5 +37,9 @@ public static List<Squad> all() {
 
  public static Squad find(int id) {
    return instances.get(id - 1);
+ }
+
+ public List<Task> getTasks() {
+   return mTasks;
  }
 }
