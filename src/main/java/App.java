@@ -28,30 +28,30 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/heros", (request, response) -> {
-      Map<String, Object> model = new HashMap<String, Object>();
-
-      //Save multiple hero objects into the user's session in an array list
-      ArrayList<Hero> heros = request.session().attribute("heros");
-      //if ArrayList does not exist create new one and add to session
-      if (heros == null) {
-        heros = new ArrayList<Hero>();
-        request.session().attribute("heros", heros);
-      }
-
-      //fetch user-inputted hero name from the form and save it in String
-      String name = request.queryParams("name");
-      int age = Integer.parseInt(request.queryParams("age"));
-      String spower = request.queryParams("spower");
-      String weakness = request.queryParams("weakness");
-      //Hero constructor to create new Hero object and add into heros ArrayList
-      Hero newHero = new Hero(name, age, spower, weakness);
-      heros.add(newHero);
-
-      //render success page
-      model.put("template", "templates/success.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+    // post("/heros", (request, response) -> {
+    //   Map<String, Object> model = new HashMap<String, Object>();
+    //
+    //   //Save multiple hero objects into the user's session in an array list
+    //   ArrayList<Hero> heros = request.session().attribute("heros");
+    //   //if ArrayList does not exist create new one and add to session
+    //   if (heros == null) {
+    //     heros = new ArrayList<Hero>();
+    //     request.session().attribute("heros", heros);
+    //   }
+    //
+    //   //fetch user-inputted hero name from the form and save it in String
+    //   String name = request.queryParams("name");
+    //   int age = Integer.parseInt(request.queryParams("age"));
+    //   String spower = request.queryParams("spower");
+    //   String weakness = request.queryParams("weakness");
+    //   //Hero constructor to create new Hero object and add into heros ArrayList
+    //   Hero newHero = new Hero(name, age, spower, weakness);
+    //   heros.add(newHero);
+    //
+    //   //render success page
+    //   model.put("template", "templates/success.vtl");
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
 
     get("/squads/new", (request, response) -> {
   Map<String, Object> model = new HashMap<String, Object>();
@@ -86,7 +86,7 @@ get("squads/:id/heroes/new", (request, response) -> {
   Map<String, Object> model = new HashMap<String, Object>();
   Squad squad = Squad.find(Integer.parseInt(request.params(":id")));
   model.put("squad", squad);
-  model.put("template", "templates/squad-heros-form.vtl");
+  model.put("template", "templates/squad-heroes-form.vtl");
   return new ModelAndView(model, layout);
 }, new VelocityTemplateEngine());
 
@@ -96,9 +96,12 @@ post("/heroes", (request, response) -> {
   Squad squad = Squad.find(Integer.parseInt(request.queryParams("squadId")));
 
   String name = request.queryParams("name");
-  Hero newhero = new Hero(name);
+  int age = Integer.parseInt(request.queryParams("age"));
+  String spower = request.queryParams("spower");
+  String weakness = request.queryParams("weakness");
+  Hero newhero = new Hero(name, age, spower, weakness);
 
-  squad.adHero(newHero);
+  squad.addHero(newhero);
 
   model.put("squad", squad);
   model.put("template", "templates/squad-heroes-success.vtl");
