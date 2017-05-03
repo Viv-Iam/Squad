@@ -23,8 +23,14 @@
   background-color: pink;
   color: white;
 }
-
-/*.add-squad {
+.squad-form {
+  background-image:  url(/images/shero3.jpg);
+  background-repeat: no-repeat;
+  height: 670px;
+  width: 1200px;
+  overflow-y: hidden;
+}
+.add-squad {
   border-style: solid;
   border-color: transparent;
   box-shadow: 0px 0px 20px #000000;
@@ -34,6 +40,4 @@
   padding: 10px;
   width: 280px;
   text-align: center;
-  background-color: pink;
-  color: white;
-}*/
+}
